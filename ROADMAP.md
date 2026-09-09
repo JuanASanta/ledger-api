@@ -13,10 +13,10 @@
 
 *(no arranques el frontend hasta que esto esté verde)*
 
-- [ ] Escribir `conftest.py` con fixtures de usuario + token
-- [ ] Test: registro de usuario
-- [ ] Test: login devuelve token válido
-- [ ] Test: login con credenciales malas falla
+- [X] Escribir `conftest.py` con fixtures de usuario + token
+- [X] Test: registro de usuario
+- [X] Test: login devuelve token válido
+- [X] Test: login con credenciales malas falla
 - [ ] Test: crear gasto (happy path)
 - [ ] Test: listar gastos del usuario
 - [ ] Test: usuario A no puede ver/editar gasto de usuario B (IDOR)
