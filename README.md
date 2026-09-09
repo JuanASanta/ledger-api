@@ -1,6 +1,6 @@
 # Ledger API
 
-API REST hecha con Django para llevar el control de gastos de un usuario. Es mi primer proyecto backend "de verdad" y lo hice con un objetivo claro: terminarlo y desplegarlo antes de empezar mis estudios universitarios.
+API REST hecha con Django para llevar el control de gastos de un usuario. Es mi primer proyecto y lo hice con un objetivo claro: terminarlo y desplegarlo antes de empezar mis estudios universitarios, para poder contruir suites de test completos, tanto backend como frontend automatizados mientras estoy estudiando, por eso el proyecto avanzará despacio pero constante.
 
 ## ¿Qué hace?
 
@@ -16,6 +16,8 @@ API REST hecha con Django para llevar el control de gastos de un usuario. Es mi 
 - Django
 - Django REST Framework
 - PostgreSQL
+- Pytest
+- Postman/Bruno
 
 ## 📦 Instalación en local
 
@@ -82,13 +84,8 @@ En desarrollo activo. Es un proyecto pequeño a propósito, pensado para llevarl
 
 ### Por hacer
 
-- [ ] Escribir tests
-- [ ] Documentar la API (Swagger / drf-spectacular)
-- [ ] Desplegar (Render / Railway)
-- [ ] Añadir filtros y paginación en `/expenses/`
-- [ ] Dockerizar
-- [ ] Sesiones por JWT
+Los pasos por hacer, así como nuevas funcionalidades y alcances se aúnan en el archivo ROADMAP.md. Esto, para tener un registro de todo lo que he avanzado sin hacer el README.md demasiado grande.
 
 ## 🙋 Sobre mí
 
-Soy Juan Antonio, terminé el ciclo de DAW en 2025 y ahora mismo estoy compaginando el grado en Ingeniería Informática con la búsqueda de mi primera oportunidad como backend developer junior. Este proyecto es parte de mi portfolio, ¡cualquier feedback es bienvenido!
+Soy Juan Antonio, terminé el ciclo de DAW en 2025 y ahora mismo estoy compaginando el grado en Ingeniería Informática con la búsqueda de mi primera oportunidad como QA Automation Junior | Fullstack Junior | QA Manual. Este proyecto es parte de mi portfolio, ¡cualquier feedback es bienvenido!
