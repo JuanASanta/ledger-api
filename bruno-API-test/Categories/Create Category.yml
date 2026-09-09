@@ -1,0 +1,32 @@
+info:
+  name: Create Category
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE_URL}}/categories/"
+  headers:
+    - name: Authorization
+      value: Token {{token_1}}
+  body:
+    type: json
+    data: '{"name": "Comida", "color": "#FF0000"}'
+  auth: inherit
+
+runtime:
+  actions:
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: res.body.id
+        method: jsonq
+      variable:
+        name: CATEGORY_1_ID
+        scope: runtime
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

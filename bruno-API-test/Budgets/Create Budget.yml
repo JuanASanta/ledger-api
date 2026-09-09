@@ -1,0 +1,29 @@
+info:
+  name: Create Budget
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE_URL}}/budgets/"
+  headers:
+    - name: Authorization
+      value: Token {{token_1}}
+    - name: Authorization
+      value: Token {{token_2}}
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "category": "3",
+        "amount": 500,
+        "period": "monthly"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

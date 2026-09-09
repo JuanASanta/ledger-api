@@ -1,0 +1,29 @@
+info:
+  name: Login testuser
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BASE_URL}}/login/"
+  body:
+    type: json
+    data: '{"username": "testuser", "password": "12345678"}'
+  auth: inherit
+
+runtime:
+  actions:
+    - type: set-variable
+      phase: after-response
+      selector:
+        expression: "res.body.token "
+        method: jsonq
+      variable:
+        name: token_1
+        scope: runtime
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
