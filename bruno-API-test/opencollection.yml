@@ -18,6 +18,8 @@ request:
   variables:
     - name: BASE_URL
       value: http://127.0.0.1:8000/api
+    - name: PROD_URL
+      value: https://ledger-api-smyq.onrender.com/api
 bundled: false
 extensions:
   bruno:
