@@ -17,8 +17,9 @@ def test_register_user(api_client):
     assert get_user_model().objects.filter(username="testuser").exists()
 
 
+
 @pytest.mark.django_db
-def test_login_user(api_client, create_user):
+def test_login_success(api_client, create_user):
     username = "testuser"
     password = "12345678"
 
@@ -29,3 +30,19 @@ def test_login_user(api_client, create_user):
 
     assert response.status_code == 200
     assert "token" in response.data
+
+
+
+@pytest.mark.django_db
+def test_login_wrong_password(api_client, create_user):
+    username = "testuser"
+    password = "12345678"
+    wrong_password = "87654321"
+
+    create_user(username=username, password=password)
+
+    data = {"username": username, "password": wrong_password}
+    response = api_client.post("/api/login/", data, format="json")
+
+    assert response.status_code == 400
+    assert "token" not in response.data
