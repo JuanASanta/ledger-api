@@ -4,10 +4,10 @@
 
 ## Fase 0 — Verificar lo que ya existe
 
-- [ ] Abrir la URL de Render y comprobar que responde (no 500, no "service unavailable")
-- [ ] Hacer login con Bruno contra la URL de producción (no local)
-- [ ] Ejecutar 2-3 requests clave de tu colección Bruno contra producción (crear gasto, listar, IDOR check)
-- [ ] Anotar en un `.md` cualquier cosa rota que encuentres
+- [X] Abrir la URL de Render y comprobar que responde (no 500, no "service unavailable")
+- [X] Hacer login con Bruno contra la URL de producción (no local)
+- [X] Ejecutar 2-3 requests clave de tu colección Bruno contra producción (crear gasto, listar, IDOR check)
+- [X] Anotar en un `.md` cualquier cosa rota que encuentres
 
 ## Fase 1 — Cerrar los tests de API que ya tenías empezados
 
