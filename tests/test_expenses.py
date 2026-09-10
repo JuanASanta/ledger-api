@@ -82,3 +82,36 @@ def test_expense_isolation(api_client, create_user, create_expense):
     response = api_client.get(f"/api/expenses/{expense.id}/")
 
     assert response.status_code == 404
+
+
+
+@pytest.mark.django_db
+def test_expense_category_isolation(api_client, create_user, create_category):
+    
+    
+
+    data_category = {
+        "name": "Test Category",
+        "color": "#FF5733"
+    }
+    
+    
+    user2 = create_user(username="testuser2", email="testuser2@example.com", password="12345678")
+    category = create_category(user=user2, **data_category)
+    
+    
+    user1 = create_user(username="testuser", email="testuser@example.com", password="12345678")
+    token = Token.objects.create(user=user1)
+    api_client.credentials(HTTP_AUTHORIZATION=f'Token {token.key}')
+
+    data_expense = {
+        "amount": 100.0,
+        "description": "Test expense",
+        "date": "2023-01-01",
+        "category": category.id  # Intentamos usar la categoría de otro usuario
+    }
+
+    response = api_client.post(f"/api/expenses/", data=data_expense)
+
+    assert response.status_code == 400
+    assert not Expense.objects.filter(description="Test expense").exists()
