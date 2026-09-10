@@ -20,9 +20,9 @@
 - [X] Test: crear gasto (happy path)
 - [X] Test: listar gastos del usuario
 - [X] Test: usuario A no puede ver/editar gasto de usuario B (IDOR)
-- [ ] Test: crear gasto con categoría de otro usuario falla
-- [ ] Ejecutar `pytest-cov` y ver qué % de cobertura tienes
-- [ ] Commit + push
+- [X] Test: crear gasto con categoría de otro usuario falla
+- [X] Ejecutar `pytest-cov` y ver qué % de cobertura tienes
+- [X] Commit + push
 
 ## Fase 2 — Frontend mínimo (esqueleto)
 
