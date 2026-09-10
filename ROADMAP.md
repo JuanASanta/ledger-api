@@ -17,9 +17,9 @@
 - [X] Test: registro de usuario
 - [X] Test: login devuelve token válido
 - [X] Test: login con credenciales malas falla
-- [ ] Test: crear gasto (happy path)
-- [ ] Test: listar gastos del usuario
-- [ ] Test: usuario A no puede ver/editar gasto de usuario B (IDOR)
+- [X] Test: crear gasto (happy path)
+- [X] Test: listar gastos del usuario
+- [X] Test: usuario A no puede ver/editar gasto de usuario B (IDOR)
 - [ ] Test: crear gasto con categoría de otro usuario falla
 - [ ] Ejecutar `pytest-cov` y ver qué % de cobertura tienes
 - [ ] Commit + push
