@@ -44,5 +44,9 @@ def test_login_wrong_password(api_client, create_user):
     data = {"username": username, "password": wrong_password}
     response = api_client.post("/api/login/", data, format="json")
 
-    assert response.status_code == 400
+    assert response.status_code == 400 
+
+    """Debería ser 401, pero por la implementación actual por defecto de DRF (obtain_auth_token) es 400. 
+    REVISAR: SI SE MIGRA A JWT, CAMBIAR A 401
+    """
     assert "token" not in response.data
