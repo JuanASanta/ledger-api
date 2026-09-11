@@ -36,10 +36,10 @@
 ## Fase 3 — Conectar de verdad backend + frontend
 
 - [X] Configurar CORS en Django (`django-cors-headers`) para permitir el origen del frontend
-- [ ] Crear un pequeño cliente HTTP en el frontend (wrapper de `fetch` o axios) que añada automáticamente el header `Authorization: Token <token>` a cada request autenticada
-- [ ] Probar login desde el frontend real (no consola) contra la API en local
-- [ ] Listar gastos en una tabla simple (sin estilos aún)
-- [ ] Formulario para crear gasto
+- [X] Crear un pequeño cliente HTTP en el frontend (wrapper de `fetch` o axios) que añada automáticamente el header `Authorization: Token <token>` a cada request autenticada
+- [X] Probar login desde el frontend real (no consola) contra la API en local
+- [X] Listar gastos en una tabla simple (sin estilos aún)
+- [X] Formulario para crear gasto
 - [ ] Formulario para editar gasto
 - [ ] Botón eliminar gasto
 - [ ] Manejo básico de errores (mostrar mensaje si el token expira o falla el login)

@@ -1,0 +1,29 @@
+info:
+  name: Create Expense
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BASE_URL}}/expenses/"
+  headers:
+    - name: Authorization
+      value: Token {{token_1}}
+    - name: Authorization
+      value: Token {{token_2}}
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 500,
+        "date": "11/09/2026"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
