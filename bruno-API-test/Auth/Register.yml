@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{PROD_URL}}/register/"
+  url: "{{BASE_URL}}/register/"
   body:
     type: json
     data: '{ "username": "testuser", "email": "test@example.com", "name": "Test User", "password": "12345678" }'

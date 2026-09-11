@@ -26,16 +26,16 @@
 
 ## Fase 2 — Frontend mínimo (esqueleto)
 
-- [ ] `npm create vite@latest` con template React
-- [ ] Configurar variable de entorno para la URL de la API
-- [ ] Página de Login: formulario simple, sin estilos
-- [ ] Login: guardar token en memoria (state), no en localStorage todavía
-- [ ] Petición de prueba: al loguear, hacer un `fetch` a `/api/expenses/` y hacer `console.log` del resultado
-- [ ] Confirmar en consola del navegador que llega el JSON correcto
+- [X] `npm create vite@latest` con template React
+- [X] Configurar variable de entorno para la URL de la API
+- [X] Página de Login: formulario simple, sin estilos
+- [X] Login: guardar token en memoria (state), no en localStorage todavía
+- [X] Petición de prueba: al loguear, hacer un `fetch` a `/api/expenses/` y hacer `console.log` del resultado
+- [X] Confirmar en consola del navegador que llega el JSON correcto
 
 ## Fase 3 — Conectar de verdad backend + frontend
 
-- [ ] Configurar CORS en Django (`django-cors-headers`) para permitir el origen del frontend
+- [X] Configurar CORS en Django (`django-cors-headers`) para permitir el origen del frontend
 - [ ] Crear un pequeño cliente HTTP en el frontend (wrapper de `fetch` o axios) que añada automáticamente el header `Authorization: Token <token>` a cada request autenticada
 - [ ] Probar login desde el frontend real (no consola) contra la API en local
 - [ ] Listar gastos en una tabla simple (sin estilos aún)
